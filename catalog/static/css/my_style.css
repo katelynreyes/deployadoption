@@ -1,0 +1,127 @@
+ .topnav {
+        background-color: green; /* Set background color */
+        overflow: hidden; /* Ensure content doesn't overflow */
+        font-size: 16px;
+        font-family: Arial;
+    }
+
+    .topnav a {
+        float: left; /* Float links to the left */
+        display: block; /* Display links as block elements */
+        color: white; /* Set text color */
+        text-align: center; /* Center align text */
+        padding: 14px 16px; /* Add padding */
+        text-decoration: none; /* Remove default underline */
+    }
+
+    .topnav a:hover {
+        background-color: white; /* Change background color on hover */
+        color: black; /* Change text color on hover */
+    }
+
+.pet-image { /*# formats the images to be the right size.*/
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+ .text1 {/*text format for larger font*/
+    font-size: 50px;
+    font-family: Arial;
+}
+
+.headerText {
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.home-image {
+    max-width: 600px;
+    max-height: 600px;
+    display: block;
+    float: right;
+    padding: 75px
+}
+.home-image2 {
+    max-width: 600px;
+    max-height: 800px;
+    display: block;
+    float: left;
+    padding: 75px;
+}
+
+.box {
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 25px 25px 25px 150px;
+  float: left;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.box2 {
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 25px 0 50px 175px;
+  float: left;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.pet_list {
+    font-size: 16px;
+    font-family: Arial;
+    margin: 10px 0;
+}
+
+.pet_detail {
+    font-size: 16px;
+    font-family: Arial;
+    color: #333333;
+    padding: 10px;
+    margin: 5px 0;
+    background: #e8f5e9;
+ }
+
+.logo { /*# formats the logo.jpg image in the top left corner of header.*/
+    max-width: 0px;
+    max-height: 0px;
+}
+
+ .paws { /*# formats the paw.jpg image in the header.*/
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 80%;
+ }
+
+
+ footer { /*# formats content within the center of the footer.*/
+     position: absolute;
+     font-family: Arial, sans-serif;
+     top: 2450px;
+     right: 0;
+     width: 1350px;
+     height: 140px;
+     background-color: #006400;
+     color: #ffffff;
+     text-align: center;
+     padding: 10px;
+  }
+
+ .animals { /*# formats the animal.jpg images in the bottom right corner of footer.*/
+  position: absolute;
+  bottom: 5px;
+  right: 16px;
+ }
+
+.application {
+    font-family: arial;
+    text-align: center;
+
+}
+

@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woof Sanctuary</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  header {
+    background: #006400; /* DarkGreen color for the header */
+    color: white;
+    padding-top: 10px;
+    min-height: 50px;
+    border-bottom: #004d00 3px solid; /* Slightly darker green for the border */
+  }
+  
+  header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  
+  header ul {
+    padding: 0;
+    list-style: none;
+    margin: 0; 
+  }
+  
+  header li {
+    display: inline;
+    padding: 0 20px;
+  }
+  
+  header #branding {
+    float: left;
+  }
+  
+  header #branding h1 {
+    margin: 0;
+    padding: 0;
+    display: inline; 
+  }
+  
+  header nav {
+    float: left; 
+    margin-left: 20px; 
+  }
+  
+  .box {
+    color: #333333;
+    padding: 10px;
+    margin: 5px 0;
+    background: #e8f5e9; 
+  }
+  
+  footer {
+    background-color: #006400; 
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .animals { /*# formats the animal.jpg images in the bottom right corner of footer.*/
+  text-align: right;
+  bottom: 25px;
+  right: 25px;
+  }
+
+</style>
+</head>
+<body>
+  <header>
+    <div id="branding">
+      <h1>Volunteer Page</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'pet_list' %}">Adoptable Pets</a></li>
+      <li><a href="{% url 'volunteer' %}">Volunteer Page</a></li>
+<li>{% for pet in pets %}
+  <li><a href="{% url 'pet_detail' pk=pet.id %}">{{ pet.name }}</a></li>
+{% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="main-content">
+      <div class="box">
+        <h2>Volunteer Requirements</h2>
+        <p>To become a volunteer at the pet shelter, you must meet the following requirements:</p>
+        <ul>
+          <li>Be at least 18 years old</li>
+          <li>Complete a volunteer application</li>
+          <li>Pass a background check</li>
+          <li>Attend a volunteer orientation</li>
+        </ul>
+      </div>
+      
+      <div class="box">
+        <h2>Volunteer Responsibilities</h2>
+        <p>As a volunteer at the pet shelter, you will have the following responsibilities:</p>
+        <ul>
+          <li>Assist with feeding, grooming, and exercising the animals</li>
+          <li>Clean and maintain the shelter facilities</li>
+          <li>Provide socialization and enrichment for the animals</li>
+          <li>Assist with adoption events and fundraising activities</li>
+        </ul>
+      </div>
+      
+      <div class="box">
+        <h2>Volunteer Benefits</h2>
+        <p>By volunteering at the pet shelter, you will enjoy the following benefits:</p>
+        <ul>
+          <li>Make a positive impact on the lives of animals in need</li>
+          <li>Gain hands-on experience working with animals</li>
+          <li>Develop new skills and knowledge</li>
+          <li>Join a community of like-minded animal lovers</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Copyright © 2024 Woof Sanctuary</p>
+    <div class="footer">
+        <img src="{% static 'dog_house.jpg' %}" alt="footer" width="80" height="85">
+    </div>
+
+    <div class="animals">
+        <img src="{% static 'animals.jpg' %}" alt="animal" width="250" height="125">
+    </div>
+</footer>
+
+</body>
+</html>

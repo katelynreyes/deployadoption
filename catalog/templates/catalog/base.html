@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Woof Sanctuary{% endblock %}</title>
+    <link href="{% static 'css/my_style.css' %}" rel="stylesheet">
+
+    <div class="logo">
+        <img src="{% static 'dog_logo.jpg' %}" alt="logo" width="120" height="120">
+    </div>
+
+    <div class="paws">
+        <img src="{% static 'paw_prints.jpg' %}" alt="paws" width="1180" height="120">
+    </div>
+
+</head>
+
+
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'pet_list' %}">Adoptable Pets</a>
+    <a href="{% url 'volunteer' %}">Volunteer Information</a>
+</div>
+
+<!-- Segment 5 --> 
+<!--Display Login/Logout right-justified in navbar -->
+    <ul class="nav navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+           <li>
+              <form action="{% url 'logout' %}" method="post">
+                 {% csrf_token %}
+                 <button type="submit">Log out</button>
+              </form>
+           </li>
+            
+        {% else %}
+            <li><a class="nav-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+            </li>
+            <li><a class="nav-link" href="{% url 'register' %}"><span class="glyphicon glyphicon-log-in"></span>Sign Up</a>
+             </li>
+            
+        {% endif %}
+    </ul>
+
+<div class="container">
+    {% if user.is_authenticated %}
+        Welcome, {{ user.first_name }} {{ user.last_name }}
+    {% endif %}
+</div>
+<div class="container">
+    <br/>
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+</body>
+
+<footer>
+    <p>Copyright © 2024 Woof Sanctuary</p>
+    <div class="footer">
+        <img src="{% static 'dog_house.jpg' %}" alt="footer" width="80" height="85"> 
+    </div>
+    
+    <div class="animals">
+        <img src="{% static 'animals.jpg' %}" alt="animal" width="250" height="125">
+    </div>
+</footer>
+
+
+</html>

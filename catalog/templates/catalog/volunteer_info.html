@@ -1,0 +1,13 @@
+{% extends 'catalog/volunteer.html' %}
+
+{% block title %}Volunteer Information{% endblock title %}
+
+{% block content %}
+  <h1 class="headerText">Woof Sanctuary</h1>
+    <div class="column">
+      <p class ="text1">Welcome to Woof Sanctuary!<p>
+        <p>We are a local non-profit that strives to rescue animals and provide them with loving homes. We are where pets come for a second chance! See our available pets here: <a href="{% url 'pet_list' %}">Adoptable Pets</a>
+        <p class = "text1"> Our Mission:</p>
+      <p>Founded in 2016, Woof Sanctuary started as a small shelter. Seven years later, we are now the biggest shelter in the area. We have saved the lives of over 1,600 animals and counting. Please consider us the next time you are looking to adopt a furry friend! If you would like to learn about volunteer opportunities, click here:  <a href="{% url 'volunteer' %}">Volunteer Information</a></p>
+    </div>
+{% endblock content %}

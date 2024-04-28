@@ -1,0 +1,49 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+<body>
+<div class="application">
+    <h1>Adoption Application</h1>
+</div>
+<form method="post" style="max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    {% csrf_token %}
+
+    <div style="margin-bottom: 10px;">
+        {{ form.full_name.errors }}
+        <label for="{{ form.full_name.id_for_label }}">Full Name:</label>
+        {{ form.full_name }}
+    </div>
+      <div style="margin-bottom: 10px;">
+        {{ form.address.errors }}
+        <label for="{{ form.address.id_for_label }}">Address:</label>
+        {{ form.address }}
+    </div>
+    <div style="margin-bottom: 10px;">
+        {{ form.email.errors }}
+        <label for="{{ form.email.id_for_label }}">Email:</label>
+        {{ form.email }}
+    </div>
+
+    <div style="margin-bottom: 10px;">
+        {{ form.phone_number.errors }}
+        <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+        {{ form.phone_number }}
+    </div>
+    
+    <div style="margin-bottom: 10px;">
+        {{ form.why_you_want_to_adopt.errors }}
+        <label for="{{ form.why_you_want_to_adopt.id_for_label }}">Why do you want to adopt?:</label>
+        <textarea id="{{ form.why_you_want_to_adopt.id_for_label }}" name="{{ form.why_you_want_to_adopt.html_name }}" rows="4" cols="50" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+    </div>
+    <div style="margin-bottom: 10px;">
+        {{ form.name_of_pet.errors }}
+        <label for="{{ form.name_of_pet.id_for_label }}">Name of Pet:</label>
+        {{ form.name_of_pet }}
+    </div>
+
+    <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px;">Submit</button>
+</form>
+</body>
+
+
+{% endblock %}
