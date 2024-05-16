@@ -13,7 +13,7 @@ from selenium.webdriver.common.by import By
 class ll_ATS(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
 
     def test_ll(self):
 

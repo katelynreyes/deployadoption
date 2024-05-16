@@ -142,8 +142,8 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # SMTP Configuration for sending password reset email
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'woofsanctuary123@gmail.com'
-EMAIL_HOST_PASSWORD = 'pgpm cnce nunk xsmy'
+EMAIL_HOST_USER = 'woofsanctuary4@gmail.com'
+EMAIL_HOST_PASSWORD = 'zgmg onpz lrjj rtwp'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # SERVER_EMAIL = 'root@gmail.com'
