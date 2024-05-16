@@ -37,9 +37,10 @@ def register(request):
             customer = form.save() # Added
             customer.save()
             messages.success(request, "Registration Successful.")
-            return redirect('/')
+            # return redirect('/')
+            return render(request, template_name='registration/register_done.html')
         messages.error(request, "Registration Unsuccessful.")
     form = RegisterForm()
     return render(request, "register.html", {"form": form})
-
+    # return render(request, template_name='registration/register_done.html', context={'register_form': form})
 

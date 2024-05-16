@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i41yx_1rmns@g#)0y--ejhdp3gjb9s+r-&#9#(8y=0*7qa%sbz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
@@ -140,10 +140,10 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # SMTP Configuration for sending password reset email
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'woofsanctuary4@gmail.com'
-EMAIL_HOST_PASSWORD = 'Mynewpet$'
+EMAIL_HOST_USER = 'woofsanctuary123@gmail.com'
+EMAIL_HOST_PASSWORD = 'pgpm cnce nunk xsmy'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-#SERVER_EMAIL = ‘root@gmail.com’
+# SERVER_EMAIL = 'root@gmail.com'

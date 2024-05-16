@@ -29,12 +29,24 @@
     font-size: 50px;
     font-family: Arial;
 }
-
+.text2 {
+    front-size: 20px;
+    font-family: Arial;
+}
 .headerText {
     font-size: 40px;
     font-family: Arial;
 }
 
+.volunteerText {
+    font-size: 30px;
+    font-family: Arial;
+}
+
+.list {
+    text-align: left;
+    font-family: Arial;
+}
 .home-image {
     max-width: 600px;
     max-height: 600px;
@@ -102,10 +114,12 @@
 
  footer { /*# formats content within the center of the footer.*/
      position: absolute;
+     overflow: hidden;
+     box-shadow: 0 100vh 0 100vh #006400; 
      font-family: Arial, sans-serif;
      top: 2450px;
      right: 0;
-     width: 1350px;
+     width: 100%;
      height: 140px;
      background-color: #006400;
      color: #ffffff;
